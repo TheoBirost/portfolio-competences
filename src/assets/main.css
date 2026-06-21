@@ -65,10 +65,26 @@ header.nav{max-width:var(--maxw);margin:1.5rem auto 0;padding:1rem 1.5rem;displa
 .tcard{border:2px solid var(--cream);border-radius:var(--r-lg);overflow:hidden;display:flex;flex-direction:column}
 .tcard-media{border-bottom:2px solid var(--cream);min-height:200px;display:flex;flex-direction:column;background:rgba(229,226,214,.03)}
 
-.gallery{display:flex;flex-direction:column;height:100%;min-height:200px}
-.gallery-main{flex:1;min-height:170px;display:flex;align-items:center;justify-content:center;overflow:hidden}
-.gallery-main img{width:100%;height:100%;min-height:170px;object-fit:cover}
-.gallery-main .media-ph{width:100%;flex:1}
+/* ---- Galerie : hauteur fixe et identique pour toutes les images, image entière visible ---- */
+.gallery{display:flex;flex-direction:column;height:100%}
+.gallery-main{
+  height:200px;            /* hauteur fixe : identique sur toutes les cartes */
+  flex:none;                /* empêche l'élément de s'étirer ou de rétrécir */
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  overflow:hidden;
+  padding:1rem;             /* marges autour de l'image */
+  background:rgba(229,226,214,.03);
+}
+.gallery-main img{
+  max-width:100%;
+  max-height:100%;
+  width:auto;
+  height:auto;
+  object-fit:contain;       /* image entière visible, sans recadrage */
+}
+.gallery-main .media-ph{width:100%;height:100%}
 .gallery-thumbs{display:flex;gap:.4rem;padding:.5rem;border-top:2px solid var(--cream);flex-wrap:wrap}
 .gallery-thumb{width:54px;height:40px;border:2px solid rgba(229,226,214,.4);border-radius:5px;overflow:hidden;cursor:pointer;background:rgba(229,226,214,.05);display:flex;align-items:center;justify-content:center;padding:0;color:var(--cream)}
 .gallery-thumb.active{border-color:var(--cream)}
@@ -101,3 +117,30 @@ footer{border-top:2px solid var(--cream);margin-top:4rem;padding:2.5rem 0}
 
 @media(max-width:767px){.nav-desktop,.socials.desktop-only{display:none}.hamburger{display:flex}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+
+/* ---- Lightbox : agrandissement de l'image au clic ---- */
+.gallery-main img{cursor:zoom-in}
+.lightbox{
+  position:fixed;inset:0;z-index:100;
+  background:rgba(35,31,32,.92);
+  display:flex;
+  align-items:center;justify-content:center;
+  padding:2rem;
+  cursor:zoom-out;
+}
+.lightbox img{
+  max-width:90vw;max-height:90vh;
+  width:auto;height:auto;
+  object-fit:contain;
+  border-radius:var(--r-md);
+  box-shadow:0 10px 40px rgba(0,0,0,.5);
+}
+.lightbox-close{
+  position:absolute;top:1.25rem;right:1.5rem;
+  width:2.5rem;height:2.5rem;
+  display:flex;align-items:center;justify-content:center;
+  border:2px solid var(--cream);border-radius:50%;
+  background:transparent;color:var(--cream);
+  font-size:1.4rem;line-height:1;cursor:pointer;
+}
+.lightbox-close:hover{background:var(--cream);color:var(--bg)}

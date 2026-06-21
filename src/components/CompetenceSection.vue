@@ -8,7 +8,7 @@ defineProps({ comp: { type: Object, required: true } })
     <h1 class="section-title">{{ comp.titre }}</h1>
     <p class="section-sub" v-html="comp.sousTitre"></p>
     <div class="ac-block">
-      <p class="ac-title">Apprentissages critiques — niveau 3</p>
+      <p class="ac-title">Apprentissages — année 3</p>
       <ul class="ac-list"><li v-for="(ac, i) in comp.acList" :key="i">{{ ac }}</li></ul>
     </div>
     <div class="cards">
