@@ -34,10 +34,10 @@ export default {
           titre: "Cineaste — application complète (front + back)",
           competence: "Développer", niveau: "N3", ac: "Framework côté serveur", tags: ["Vue.js"],
           media: { type: "links", links: [
-            { label: "Voir le site", url: "https://cineaste.theo-birost.fr/", primary: true },
-            { label: "Code — front", url: "https://github.com/TheoBirost/vue-movie-app" },
-            { label: "Code — back", url: "https://github.com/TheoBirost/wr506d" }
-          ]},
+              { label: "Voir le site", url: "https://cineaste.theo-birost.fr/", primary: true },
+              { label: "Code — front", url: "https://github.com/TheoBirost/vue-movie-app" },
+              { label: "Code — back", url: "https://github.com/TheoBirost/wr506d" }
+            ]},
           legende: "Liens vers l'application en ligne et les deux dépôts (front et back).",
           commentaire: "Une appli ciné faite de A à Z : un back-end qui sert les données et toute l'interface en Vue.js. Mon projet le plus abouti en développement, déployé sur mon propre domaine."
         },
@@ -94,15 +94,15 @@ export default {
         {
           titre: "Forum H2 — réunions avec le client",
           competence: "Entreprendre", niveau: "N3", ac: "Collaboration parties prenantes", tags: [],
-          media: { type: "docs", docs: [ { label: "Compte-rendu de réunion (ou tes notes)", url: "" }, { label: "Notes de cadrage / brief client", url: "" } ] },
-          legende: "Comptes-rendus des réunions avec l'organisateur.",
+          media: { type: "docs", docs: [ { label: "Voir le compte-rendu (PDF)", url: "/img/Compte-rendu-reunion_Forum-H2.pdf" }, { label: "Voir les notes de cadrage (PDF)", url: "/img/Notes-de-cadrage_Forum-H2.pdf" } ] },
+          legende: "Comptes-rendus des réunions avec l'organisateur. Cliquer sur un bouton pour ouvrir le PDF.",
           commentaire: "Le forum est un vrai client (Pôle Véhicule du Futur). Réunions régulières pour comprendre ses besoins et valider chaque étape."
         },
         {
           titre: "Forum H2 — planning & deadline",
           competence: "Entreprendre", niveau: "N3", ac: "Conduite de projet", tags: [],
-          media: { type: "docs", docs: [ { label: "Planning / rétroplanning", url: "" }, { label: "Suivi d'avancement / priorités", url: "" } ] },
-          legende: "Le planning du projet.",
+          media: { type: "docs", docs: [ { label: "Voir le planning (PDF)", url: "/img/Planning-retroplanning_Forum-H2.pdf" }, { label: "Voir le suivi d'avancement (PDF)", url: "/img/Suivi-avancement-priorites_Forum-H2.pdf" } ] },
+          legende: "Le planning du projet. Cliquer sur un bouton pour ouvrir le PDF.",
           commentaire: "La date de l'événement est fixe : il fallait livrer à temps. J'ai organisé le travail par étapes et priorisé les pages importantes."
         },
         {
